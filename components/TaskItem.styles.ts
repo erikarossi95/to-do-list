@@ -28,14 +28,31 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '700',
   },
-  title: {
+  content: {
     flex: 1,
+  },
+  title: {
     fontSize: 16,
     color: '#111',
   },
   titleDone: {
     textDecorationLine: 'line-through',
     color: '#999',
+  },
+  categoryRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    marginTop: 4,
+  },
+  categoryDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+  },
+  categoryName: {
+    fontSize: 12,
+    color: '#666',
   },
   delete: {
     padding: 6,

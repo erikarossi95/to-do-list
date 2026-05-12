@@ -17,13 +17,14 @@ export function useTasks() {
     if (loaded) saveTasks(tasks);
   }, [tasks, loaded]);
 
-  function addTask(title: string) {
+  function addTask(title: string, categoryId: string) {
     const trimmed = title.trim();
     if (!trimmed) return;
     const newTask: Task = {
       id: Date.now().toString() + Math.random().toString(36).slice(2, 7),
       title: trimmed,
       done: false,
+      categoryId,
       createdAt: Date.now(),
     };
     setTasks((prev) => [newTask, ...prev]);
